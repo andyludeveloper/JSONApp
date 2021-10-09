@@ -7,6 +7,7 @@ import com.andydeveloper.jsonapp.helpers.GsonHelper
 import com.andydeveloper.jsonapp.helpers.JsonHelper
 import com.andydeveloper.jsonapp.helpers.MoshiHelper
 import com.andydeveloper.jsonapp.helpers.SerializationHelper
+import com.andydeveloper.jsonapp.models.Performance
 import com.andydeveloper.jsonapp.models.Person
 import com.andydeveloper.jsonapp.models.PersonM
 import com.andydeveloper.jsonapp.models.PersonS
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         val moshi = findViewById<TextView>(R.id.moshiContent)
         val serialization = findViewById<TextView>(R.id.serializationContent)
 
-        val person = GsonHelper().fromJson(jsonString, Person::class.java)
+        val person = GsonHelper().fromJson(SampleJson.secondHand, Performance::class.java)
+        val totalResults = person.totalResults
 //        val fromJson = Gson().fromJson<Person>(jsonString, Person::class.java)
         gson.text = person.toString()
 
@@ -42,5 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         val personS = SerializationHelper().fromJson<PersonS>(jsonString)
         serialization.text = personS.toString()
+
+
     }
 }
