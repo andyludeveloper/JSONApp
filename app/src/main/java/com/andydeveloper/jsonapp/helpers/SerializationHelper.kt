@@ -1,6 +1,5 @@
 package com.andydeveloper.jsonapp.helpers
 
-import com.andydeveloper.jsonapp.models.PersonS
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 

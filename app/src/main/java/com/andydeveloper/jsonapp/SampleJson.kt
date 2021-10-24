@@ -27,6 +27,24 @@ object SampleJson {
             "skippedResults": 0
         }
     """.trimIndent()
+    val secondHand1 = """
+        {
+            "totalResults": "1",
+            "resultPage": [
+                {
+                    "entityType": "performance",
+                    "uri": "https://secondhandsongs.com/performance/25405",
+                    "title": "Something in the Way",
+                    "performer": {
+                        "uri": "https://secondhandsongs.com/artist/169",
+                        "name": "Nirvana [US]"
+                    },
+                    "isOriginal": true
+                }
+            ],
+            "skippedResults": "0"
+        }
+    """.trimIndent()
 
     val secondHandEmptyResult = """
         {
